@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  background: url(images/background.png);
+  margin: 0 auto;
+}
+
+.main {
+  margin: 127px 0 110px 103px;
+}
+
+.main__title {
+  color: #FFFFFF;
+  font-size: 57px;
+  margin-bottom: 7px;
+}
+
+.main__description {
+  margin: 0 0 59px 0;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+.choice-level {
+  margin-bottom: 142px;
+}
+
+/* почему не работает? */
+.radio {
+  background-color: red;
+}
+
+.description {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 50px;
+  padding-left: 24px;
+}
+
+.description:hover {
+  color: #D62B2E;
+}
+
+.level {
+  margin-bottom: 23px;
+}
+
+.main__button {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 32px;
+  padding: 28px 85px;
+  background-color: #D62B2E;
+  border-radius: 7px;
+  /* opacity: .5s; */
+}
+
+.main__button:hover {
+  border: 2px solid #FFFFFF;
+}
+
+.main__card {
+  margin: -180px 0px 0px 752px;
+  width: 511px;
+  height: 405px;
+  background: url(images/main-card-back-2.png), url(images/main-card-back-1.png);
+  background-repeat: no-repeat;
+  background-position: 127px 5px, 0 0;
+}
