@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Card game: find bag</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="main__title">Выберите уровень сложности:</h1>
+      <p class="main__description">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
+      <div class="choice-level">
+        <div class="level">
+          <input class="level__radio" type="radio" name="choice" value="" id="easy-radio" checked>
+          <label class="level__description" for="easy-radio">Простой</label>
+        </div>
+        <div class="level">
+          <input class="level__radio" type="radio" name="choice" value="" id="medium-radio">
+          <label class="level__description" for="medium-radio">Средний</label>
+        </div>
+        <div class="level">
+          <input class="level__radio" type="radio" name="choice" value="" id="hard-radio">
+          <label class="level__description" for="hard-radio">Сложный</label>
+        </div>
+      </div>
+      <a class="main__button" href="#">Начать игру</a>
+      <div class="main__card"></div>
+    </main>
+  </body>
+</html>
