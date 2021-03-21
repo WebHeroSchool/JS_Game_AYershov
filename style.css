@@ -28,24 +28,41 @@ body {
   margin-bottom: 142px;
 }
 
-/* почему не работает? */
-.radio {
-  background-color: red;
-}
-
-.description {
-  text-decoration: none;
+.level__description {
   color: #FFFFFF;
   font-size: 50px;
-  padding-left: 24px;
+  padding-left: 37px;
+  cursor: pointer;
 }
 
-.description:hover {
+.level__description:hover {
   color: #D62B2E;
 }
 
+.level__description::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top:21px;
+  left: 4px;
+  z-index: 1;
+  transition: .3s;
+  transform: rotate(45deg);
+}
+
 .level {
+  position: relative;
   margin-bottom: 23px;
+}
+
+.level__radio {
+  appearance: none;
+}
+
+.level__radio:checked + .level__description::before {
+  background-color: #D62B2E;
 }
 
 .main__button {
@@ -55,7 +72,6 @@ body {
   padding: 28px 85px;
   background-color: #D62B2E;
   border-radius: 7px;
-  /* opacity: .5s; */
 }
 
 .main__button:hover {
