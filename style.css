@@ -8,7 +8,7 @@ body {
 }
 
 .main {
-  margin: 127px 0 110px 103px;
+  margin: 4% 0 0 7%;
 }
 
 .main__title {
@@ -79,10 +79,73 @@ body {
 }
 
 .main__card {
-  margin: -180px 0px 0px 752px;
+  margin: -20% 0px 0px 752px;
   width: 511px;
   height: 405px;
   background: url(images/main-card-back-2.png), url(images/main-card-back-1.png);
   background-repeat: no-repeat;
   background-position: 127px 5px, 0 0;
+}
+
+/* класс создан в JS */
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding-left: 2%;
+  max-width: 79%;           /*это значение для 10 карт - для остальных карт значение меняется в JS */
+  padding-top: 1%;
+}
+
+/* класс создан в JS для рубашки карты*/
+.card {
+  background: url(images/card-back.png);
+  width: 218px;
+  height: 341px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  border-radius: 7px;
+}
+
+.card:hover {
+  cursor: pointer;
+  transition: transform 1s;
+  transform: translateY(-15px) rotate(-5deg);
+}
+
+/* класс создан в JS для карты game_over */
+.flip-card-game_over {
+  background: url(images/card-front-game_over.png);
+  width: 218px;
+  height: 341px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  border-radius: 7px;
+  transition: transform .5s, background .6s;
+  transform: rotateY(180deg);                               /*  вот с этой строкой поработать - при 360 не видно переворота, при 180 видно, но карта зеркалится */
+}
+
+@media all and (max-width: 1366px) {
+  .main__card {
+    margin-left: 650px;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .main__card {
+    margin-left: 420px;
+  }
+}
+
+@media all and (max-width: 920px) {
+  .main__card {
+    margin: 50px 0 0 0;
+  }
+}
+
+@media all and (max-width: 396px) {
+  .main__button {
+    padding: 28px 35px;
+  }
 }
