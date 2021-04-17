@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  background: url(images/background.png);
+  margin: 0 auto;
+}
+
+.main {
+  margin: 4% 0 0 7%;
+}
+
+.main__title {
+  color: #FFFFFF;
+  font-size: 57px;
+  margin-bottom: 7px;
+}
+
+.main__description {
+  margin: 0 0 59px 0;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+.choice-level {
+  margin-bottom: 142px;
+}
+
+.level__description {
+  color: #FFFFFF;
+  font-size: 50px;
+  padding-left: 37px;
+  cursor: pointer;
+}
+
+.level__description:hover {
+  color: #D62B2E;
+}
+
+.level__description::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top:21px;
+  left: 4px;
+  z-index: 1;
+  transition: .3s;
+  transform: rotate(45deg);
+}
+
+.level {
+  position: relative;
+  margin-bottom: 23px;
+}
+
+.level__radio {
+  appearance: none;
+}
+
+.level__radio:checked + .level__description::before {
+  background-color: #D62B2E;
+}
+
+.main__button {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 32px;
+  padding: 28px 85px;
+  background-color: #D62B2E;
+  border-radius: 7px;
+}
+
+.main__button:hover {
+  border: 2px solid #FFFFFF;
+}
+
+.main__card {
+  margin: -20% 0px 0px 752px;
+  width: 511px;
+  height: 405px;
+  background: url(images/main-card-back-2.png), url(images/main-card-back-1.png);
+  background-repeat: no-repeat;
+  background-position: 127px 5px, 0 0;
+}
+
+/* класс создан в JS */
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding-left: 2%;
+  max-width: 79%;           /*это значение для 10 карт - для остальных карт значение меняется в JS */
+  padding-top: 1%;
+}
+
+/* класс создан в JS для рубашки карты*/
+.card {
+  background: url(images/card-back.png);
+  width: 218px;
+  height: 341px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  border-radius: 7px;
+}
+
+.card:hover {
+  cursor: pointer;
+  transition: transform 1s;
+  transform: translateY(-15px) rotate(-5deg);
+}
+
+/* класс создан в JS для карты game_over */
+.flip-card-game_over {
+  background: url(images/card-front-game_over.png);
+  width: 218px;
+  height: 341px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  border-radius: 7px;
+  transition: transform .5s, background .6s;
+  transform: rotateY(180deg);                               /*  вот с этой строкой поработать - при 360 не видно переворота, при 180 видно, но карта зеркалится */
+}
+
+@media all and (max-width: 1366px) {
+  .main__card {
+    margin-left: 650px;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .main__card {
+    margin-left: 420px;
+  }
+}
+
+@media all and (max-width: 920px) {
+  .main__card {
+    margin: 50px 0 0 0;
+  }
+}
+
+@media all and (max-width: 396px) {
+  .main__button {
+    padding: 28px 35px;
+  }
+}
